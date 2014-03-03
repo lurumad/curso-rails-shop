@@ -1,0 +1,35 @@
+<div class="container">
+	<div class="row">
+		<h1>Product</h1>
+
+		<%= render 'form' %>
+
+		<div class="row">
+			<h2>List of products</h2>
+		    <table class="table">
+		      <thead>
+		        <tr>
+		          <th>First Name</th>
+		          <th></th>
+		          <th></th>
+		        </tr>
+		      </thead>
+		      <tbody>
+		      	<% for product in @products %>
+			        <tr>
+			          <td><%= product.name %> </td>
+			          <td><%= link_to 'Edit', edit_product_path(product) %></td>
+			          <td><%= link_to 'Delete', product, :method => 'delete' %></td>
+			        </tr>
+		        <% end %>
+		      </tbody>
+		    </table>
+	  	</div>
+	</div>
+</div>
+<%= form_for @product do |f| %>
+	<%= @product.name %>
+	<%= @product.description %>
+	<%= @product.manufacturer %>
+	<%= @product.stock %>
+<% end %>

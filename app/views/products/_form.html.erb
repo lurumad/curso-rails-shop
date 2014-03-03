@@ -1,0 +1,35 @@
+<%= form_for @product, :html => { :class => 'form-horizontal' } do |f| %>
+	<fieldset>
+		<!-- Text input-->
+		<div class="control-group">
+		  <label class="control-label" for="textinput"><%= :name %></label>
+		  <div class="controls">
+		  	<%= f.text_field :name, :html => { :class => 'input-xlarge' } %>
+		  </div>
+		</div>
+		<div class="control-group">
+		  <label class="control-label" for="textinput"><%= :description %></label>
+		  <div class="controls">
+		  	<%= f.text_field :description, :html => { :class => 'input-xlarge' } %>
+		  </div>
+		</div>
+		<div class="control-group">
+		  <label class="control-label" for="textinput"><%= :manufacturer %></label>
+		  <div class="controls">
+		  	<%= f.text_field :manufacturer, :html => { :class => 'input-xlarge' } %>
+		  </div>
+		</div>
+		<div class="control-group">
+		  <label class="control-label" for="textinput"><%= :stock %></label>
+		  <div class="controls">
+		  	<%= f.text_field :stock, :html => { :class => 'input-xlarge' } %>
+		  </div>
+		</div>
+		<div class="control-group">
+		  <p></p>
+		  <div class="controls">
+		  	<%= f.submit :html => { :class => 'btn' } %>
+		  </div>
+		</div>
+	</fieldset>
+<% end %>
